@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="hr_applicant_view_form_s19307">
+        <field name="name">Jobs - Recruitment Form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_mobile']" position="after">
+                <field name="partner_linkedin" widget="url"/>
+            </xpath>
+            <xpath expr="//field[@name='type_id']" position="after">
+                <field name="cv_file" filename="cv_file_name" string="CV file"/>
+                <field name="cv_file_name" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+  </data>
+</odoo>
